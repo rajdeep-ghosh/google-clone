@@ -2735,6 +2735,11 @@ raw-body@2.4.1:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
+react-animals@^0.0.82:
+  version "0.0.82"
+  resolved "https://registry.yarnpkg.com/react-animals/-/react-animals-0.0.82.tgz#2d51e2b5e0bb5866f4104248e541174e7b6f1461"
+  integrity sha512-kxuRHOqt1Y+uA1ecuPR0fJhA7o4XXc/rz1rC+dcS1lYC+OkDC+/LrGn5+ixz5IjrImYKAFpni7kNWJ2w45OUiQ==
+
 react-dom@17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
