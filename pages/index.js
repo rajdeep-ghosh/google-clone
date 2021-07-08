@@ -1,8 +1,17 @@
+import { useState } from "react";
 import Head from "next/head";
 import Header from "../components/Header";
 import Main from "../components/Main";
 
 export default function Home() {
+  const [isDarkMode, setDarkMode] = useState(false);
+
+  function handleTheme() {
+    const root = window.document.documentElement;
+    root.classList.toggle('dark');
+    setDarkMode(!isDarkMode);
+  }
+
   return (
     <div>
       <Head>
@@ -14,8 +23,8 @@ export default function Home() {
         <link rel="manifest" href="favicon/site.webmanifest" />
       </Head>
 
-      <Header />
-      <Main />
+      <Header changeTheme={handleTheme} isDarkMode={isDarkMode} />
+      <Main isDarkMode={isDarkMode} />
     </div>
   );
 }
