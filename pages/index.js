@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Header from "../components/Header";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         <link rel="manifest" href="favicon/site.webmanifest" />
       </Head>
 
-      <h1>Lets build Google using NEXT.JS and Tailwind CSS</h1>
+      <Header />
     </div>
   );
 }
