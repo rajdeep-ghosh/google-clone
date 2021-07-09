@@ -3,7 +3,7 @@ import Avatar from "./Avatar";
 
 function Header({ changeTheme, isDarkMode }) {
   return (
-    <header className="flex justify-between items-center p-5 w-full">
+    <header className="flex justify-between items-center absolute top-0 p-5 w-full">
       <div className="flex space-x-6 items-center">
         <p className="cursor-pointer hover:underline hover:text-gray-900 dark:hover:text-white hidden sm:block">Store</p>
       </div>

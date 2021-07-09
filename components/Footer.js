@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="flex flex-col px-8 py-3 w-full text-sm text-gray-500 dark:text-gray-400 divide-y-[1px] divide-gray-300 dark:divide-gray-800 bg-gray-100 dark:bg-[#171717]">
+    <footer className="footer absolute bottom-0">
       <div className="mb-3">
           <p>India</p>
       </div>

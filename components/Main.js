@@ -7,7 +7,7 @@ function Main({ isDarkMode }) {
   const logo = `/logo/googlelogo-${isDarkMode ? `light` : `color`}.png`;
 
   return (
-    <main>
+    <main className="-mt-20">
       <form className="flex flex-col flex-grow items-center">
         <img className="h-16 sm:h-auto" src={logo} loading="eager" alt="logo" />
         <div className="searchbar w-[95%]">

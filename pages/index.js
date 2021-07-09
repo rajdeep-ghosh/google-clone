@@ -24,11 +24,11 @@ export default function Home() {
         <link rel="manifest" href="favicon/site.webmanifest" />
       </Head>
 
-      <Header changeTheme={handleTheme} isDarkMode={isDarkMode} />
-      <div className="flex flex-col justify-center items-center h-screen">
+      <div className="flex flex-col justify-center items-center relative h-screen">
+        <Header changeTheme={handleTheme} isDarkMode={isDarkMode} />
         <Main isDarkMode={isDarkMode} />
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }
