@@ -8,6 +8,12 @@ body {
 
 @layer components {
   .searchbar {
-    @apply flex items-center mt-8 w-full px-5 py-3 rounded-full hover:shadow-lg focus-within:shadow-lg border border-gray-200 dark:border-gray-500 max-w-md sm:max-w-xl lg:max-w-2xl;
+    @apply flex items-center mt-8 w-full px-5 py-3 rounded-full hover:shadow-lg focus-within:shadow-lg border 
+    border-gray-200 dark:border-gray-500 max-w-md sm:max-w-xl lg:max-w-2xl;
+  }
+
+  .btn {
+    @apply bg-google-gray-light dark:bg-google-gray-dark p-3 mt-6 text-sm rounded-md ring-gray-200 
+    dark:ring-gray-500 hover:ring-1 focus:outline-none active:ring-gray-300 hover:shadow-md;
   }
 }
