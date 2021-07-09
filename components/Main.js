@@ -8,9 +8,9 @@ function Main({ isDarkMode }) {
 
   return (
     <main>
-      <form className="flex flex-col flex-grow items-center mt-40">
-        <img src={logo} loading="eager" alt="logo" />
-        <div className="searchbar">
+      <form className="flex flex-col flex-grow items-center">
+        <img className="h-16 sm:h-auto" src={logo} loading="eager" alt="logo" />
+        <div className="searchbar w-[95%]">
           <SearchIcon className="h-5 mr-3 text-gray-500 dark:text-gray-400" />
           <input className="flex-grow focus:outline-none dark:bg-darkmode" type="text" />
           <MicrophoneIcon className="h-5 ml-3 cursor-pointer text-gray-500 dark:text-gray-400" />
@@ -19,17 +19,19 @@ function Main({ isDarkMode }) {
           <button className="btn">Google Search</button>
           <button className="btn">I'm Feeling Lucky</button>
         </div>
-        <div className="flex space-x-3 mt-7 text-sm">
-          <p className="dark:text-gray-400">Google offered in:</p>
-          <p className="text-blue-500 hover:underline cursor-pointer">বাংলা</p>
-          <p className="text-blue-500 hover:underline cursor-pointer">हिन्दी</p>
-          <p className="text-blue-500 hover:underline cursor-pointer">मराठी</p>
-          <p className="text-blue-500 hover:underline cursor-pointer">français</p>
-          <p className="text-blue-500 hover:underline cursor-pointer">español</p>
-          <p className="text-blue-500 hover:underline cursor-pointer">日本語</p>
-          <p className="text-blue-500 hover:underline cursor-pointer">Deutsche</p>
-          <p className="text-blue-500 hover:underline cursor-pointer">português</p>
-          <p className="text-blue-500 hover:underline cursor-pointer">русский</p>
+        <div className="flex flex-col sm:flex-row items-center space-x-3 mt-7 text-xs sm:text-sm">
+          <p className="dark:text-gray-400 pb-3">Google offered in:</p>
+          <div className="flex flex-wrap justify-center items-center space-x-3">
+            <p className="text-blue-500 hover:underline cursor-pointer pb-3">বাংলা</p>
+            <p className="text-blue-500 hover:underline cursor-pointer pb-3">हिन्दी</p>
+            <p className="text-blue-500 hover:underline cursor-pointer pb-3">मराठी</p>
+            <p className="text-blue-500 hover:underline cursor-pointer pb-3">français</p>
+            <p className="text-blue-500 hover:underline cursor-pointer pb-3">español</p>
+            <p className="text-blue-500 hover:underline cursor-pointer pb-3">日本語</p>
+            <p className="text-blue-500 hover:underline cursor-pointer pb-3">Deutsche</p>
+            <p className="text-blue-500 hover:underline cursor-pointer pb-3">português</p>
+            <p className="text-blue-500 hover:underline cursor-pointer pb-3">русский</p>
+          </div>
         </div>
       </form>
     </main>

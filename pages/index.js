@@ -24,7 +24,9 @@ export default function Home() {
       </Head>
 
       <Header changeTheme={handleTheme} isDarkMode={isDarkMode} />
-      <Main isDarkMode={isDarkMode} />
+      <div className="flex flex-col justify-center items-center h-screen">
+        <Main isDarkMode={isDarkMode} />
+      </div>
     </div>
   );
 }
