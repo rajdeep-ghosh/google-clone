@@ -2,6 +2,7 @@ import { useState } from "react";
 import Head from "next/head";
 import Header from "../components/Header";
 import Main from "../components/Main";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const [isDarkMode, setDarkMode] = useState(false);
@@ -27,6 +28,7 @@ export default function Home() {
       <div className="flex flex-col justify-center items-center h-screen">
         <Main isDarkMode={isDarkMode} />
       </div>
+      <Footer />
     </div>
   );
 }
