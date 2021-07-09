@@ -3,5 +3,11 @@
 @tailwind utilities;
 
 body {
-  @apply text-gray-700 dark:text-gray-200 dark:bg-[#202124];
+  @apply text-gray-700 dark:text-gray-200 dark:bg-darkmode;
+}
+
+@layer components {
+  .searchbar {
+    @apply flex items-center mt-8 w-full px-5 py-3 rounded-full hover:shadow-lg focus-within:shadow-lg border border-gray-200 dark:border-gray-500 max-w-md sm:max-w-xl lg:max-w-2xl;
+  }
 }
