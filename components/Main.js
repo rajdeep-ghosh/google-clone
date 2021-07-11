@@ -8,17 +8,21 @@ function Main({ isDarkMode }) {
   const logo = `/logo/googlelogo-${isDarkMode ? `light` : `color`}.png`;
   const languages = ['বাংলা','हिन्दी','मराठी','français','español','日本語','Deutsche','português','русский'];
 
+  function search(e) {
+    e.preventDefault();
+  }
+
   return (
     <main className="-mt-20">
       <form className="flex flex-col flex-grow items-center">
         <img className="h-16 sm:h-auto" src={logo} loading="eager" alt="logo" />
         <div className="searchbar w-[95%]">
           <SearchIcon className="h-5 mr-3 text-gray-500 dark:text-gray-400" />
-          <input className="flex-grow focus:outline-none dark:bg-darkmode" type="text" />
+          <input className="flex-grow focus:outline-none dark:bg-darkmode transition-all" type="text" />
           <MicrophoneIcon className="h-5 ml-3 cursor-pointer text-gray-500 dark:text-gray-400" />
         </div>
         <div className="flex space-x-3">
-          <button className="btn">Google Search</button>
+          <button onClick={search} className="btn">Google Search</button>
           <a className="btn" href="https://google.com/doodles" rel="noreferrer">I'm Feeling Lucky</a>
         </div>
         <div className="flex flex-col sm:flex-row items-center space-x-3 mt-7 text-xs sm:text-sm">
