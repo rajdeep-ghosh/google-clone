@@ -15,7 +15,7 @@ function Header({ changeTheme, isDarkMode }) {
       </div>
       <div className="flex space-x-6 items-center">
         <div onClick={changeTheme}>
-          {isDarkMode ? <SunIcon className="h-6 cursor-pointer" /> : <MoonIcon className="h-6 cursor-pointer" />}
+          {isDarkMode ? <SunIcon className="h-6 cursor-pointer transition-all" /> : <MoonIcon className="h-6 cursor-pointer transition-all" />}
         </div>
         <p className="cursor-pointer hover:underline hover:text-gray-900 dark:hover:text-white hidden sm:block">Gmail</p>
         <p className="cursor-pointer hover:underline hover:text-gray-900 dark:hover:text-white hidden sm:block">Images</p>
