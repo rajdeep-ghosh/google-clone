@@ -17,7 +17,7 @@ function Main({ isDarkMode }) {
         </div>
         <div className="flex space-x-3">
           <button className="btn">Google Search</button>
-          <button className="btn">I'm Feeling Lucky</button>
+          <a className="btn" href="https://google.com/doodles" rel="noreferrer">I'm Feeling Lucky</a>
         </div>
         <div className="flex flex-col sm:flex-row items-center space-x-3 mt-7 text-xs sm:text-sm">
           <p className="dark:text-gray-400 pb-3">Google offered in:</p>
