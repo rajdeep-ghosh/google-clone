@@ -1,15 +1,22 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 
+import { useRef } from "react";
+import { useRouter } from "next/router";
 import { MicrophoneIcon, SearchIcon } from "@heroicons/react/solid";
 import Languages from "./Languages";
 
 function Main({ isDarkMode }) {
+  const router = useRouter();
+  const searchRef = useRef(null);
   const logo = `/logo/googlelogo-${isDarkMode ? `light` : `color`}.png`;
   const languages = ['বাংলা','हिन्दी','मराठी','français','español','日本語','Deutsche','português','русский'];
 
   function search(e) {
     e.preventDefault();
+    const searchQuery = searchRef.current.value;
+    if(!searchQuery) return;
+    router.push(`/search?query=${searchQuery}`);
   }
 
   return (
@@ -18,7 +25,7 @@ function Main({ isDarkMode }) {
         <img className="h-16 sm:h-auto" src={logo} loading="eager" alt="logo" />
         <div className="searchbar w-[95%]">
           <SearchIcon className="h-5 mr-3 text-gray-500 dark:text-gray-400" />
-          <input className="flex-grow focus:outline-none dark:bg-darkmode transition-all" type="text" />
+          <input ref={searchRef} className="flex-grow focus:outline-none dark:bg-darkmode transition-all" type="text" />
           <MicrophoneIcon className="h-5 ml-3 cursor-pointer text-gray-500 dark:text-gray-400" />
         </div>
         <div className="flex space-x-3">
