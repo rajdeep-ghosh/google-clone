@@ -2,9 +2,11 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { MicrophoneIcon, SearchIcon } from "@heroicons/react/solid";
+import Languages from "./Languages";
 
 function Main({ isDarkMode }) {
   const logo = `/logo/googlelogo-${isDarkMode ? `light` : `color`}.png`;
+  const languages = ['বাংলা','हिन्दी','मराठी','français','español','日本語','Deutsche','português','русский'];
 
   return (
     <main className="-mt-20">
@@ -22,15 +24,9 @@ function Main({ isDarkMode }) {
         <div className="flex flex-col sm:flex-row items-center space-x-3 mt-7 text-xs sm:text-sm">
           <p className="dark:text-gray-400 pb-3">Google offered in:</p>
           <div className="flex flex-wrap justify-center items-center space-x-3">
-            <p className="text-blue-500 hover:underline cursor-pointer pb-3">বাংলা</p>
-            <p className="text-blue-500 hover:underline cursor-pointer pb-3">हिन्दी</p>
-            <p className="text-blue-500 hover:underline cursor-pointer pb-3">मराठी</p>
-            <p className="text-blue-500 hover:underline cursor-pointer pb-3">français</p>
-            <p className="text-blue-500 hover:underline cursor-pointer pb-3">español</p>
-            <p className="text-blue-500 hover:underline cursor-pointer pb-3">日本語</p>
-            <p className="text-blue-500 hover:underline cursor-pointer pb-3">Deutsche</p>
-            <p className="text-blue-500 hover:underline cursor-pointer pb-3">português</p>
-            <p className="text-blue-500 hover:underline cursor-pointer pb-3">русский</p>
+            {languages.map(language => {
+              return <Languages key={language} lang={language} />;
+            })}
           </div>
         </div>
       </form>
