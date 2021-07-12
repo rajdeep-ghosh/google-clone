@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
-import Header from "../components/Header";
+import HomeHeader from "../components/HomeHeader";
 import Main from "../components/Main";
 import Footer from "../components/Footer";
 
@@ -25,7 +25,7 @@ export default function Home() {
       </Head>
 
       <div className="flex flex-col justify-center items-center relative h-screen">
-        <Header changeTheme={handleTheme} isDarkMode={isDarkMode} />
+        <HomeHeader changeTheme={handleTheme} isDarkMode={isDarkMode} />
         <Main isDarkMode={isDarkMode} />
         <Footer />
       </div>

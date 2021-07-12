@@ -1,7 +1,7 @@
 import { ViewGridIcon, SunIcon, MoonIcon } from "@heroicons/react/solid";
 import Avatar from "./Avatar";
 
-function Header({ changeTheme, isDarkMode }) {
+function HomeHeader({ changeTheme, isDarkMode }) {
   return (
     <header className="flex justify-between items-center absolute top-0 p-5 w-full">
       <div className="flex space-x-6 items-center">
@@ -26,4 +26,4 @@ function Header({ changeTheme, isDarkMode }) {
   );
 }
 
-export default Header;
+export default HomeHeader;
