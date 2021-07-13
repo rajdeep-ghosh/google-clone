@@ -3,8 +3,8 @@
 
 import { useRef } from "react";
 import { useRouter } from "next/router";
-import { MicrophoneIcon, SearchIcon } from "@heroicons/react/solid";
 import Languages from "./Languages";
+import Searchbar from "./Seachbar";
 
 function Main({ isDarkMode }) {
   const router = useRouter();
@@ -23,11 +23,7 @@ function Main({ isDarkMode }) {
     <main className="-mt-20">
       <form className="flex flex-col flex-grow items-center">
         <img className="h-16 sm:h-auto" src={logo} loading="eager" alt="logo" />
-        <div className="searchbar w-[95%]">
-          <SearchIcon className="h-5 mr-3 text-gray-500 dark:text-gray-400" />
-          <input ref={searchRef} className="flex-grow focus:outline-none dark:bg-darkmode transition-all" type="text" />
-          <MicrophoneIcon className="h-5 ml-3 cursor-pointer text-gray-500 dark:text-gray-400" />
-        </div>
+        <Searchbar searchRef={searchRef} />
         <div className="flex space-x-3">
           <button onClick={search} className="btn">Google Search</button>
           <a className="btn" href="https://google.com/doodles" rel="noreferrer">I'm Feeling Lucky</a>
