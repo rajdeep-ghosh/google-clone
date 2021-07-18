@@ -1,7 +1,16 @@
+import { useState } from "react";
 import Head from "next/head";
 import SearchHeader from "../components/SearchHeader";
 
 function Search() {
+  const [isDarkMode, setDarkMode] = useState(document.querySelector("html").classList.contains("dark"));
+
+  function handleTheme() {
+    const root = window.document.documentElement;
+    root.classList.toggle('dark');
+    setDarkMode(!isDarkMode);
+  }
+
   return (
     <div>
       <Head>
@@ -13,7 +22,7 @@ function Search() {
         <link rel="manifest" href="favicon/site.webmanifest" />
       </Head>
 
-      <SearchHeader />
+      <SearchHeader isDarkMode={isDarkMode} changeTheme={handleTheme} />
     </div>
   );
 }
