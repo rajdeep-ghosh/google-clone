@@ -18,7 +18,7 @@ function Search({ results }) {
   return (
     <div>
       <Head>
-        <title>Google Clone Search</title>
+        <title>{router.query.query} - Google Clone Search</title>
         <meta name="description" content="Google Clone built using NEXT.JS and Tailwind CSS" />
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
