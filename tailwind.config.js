@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "darkmode": "#202124",
+        darkmode: "#202124",
         "google-gray": {
           light: "#f8f9fa",
           dark: "#303134",
@@ -16,5 +16,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/line-clamp"),
+  ],
 };
