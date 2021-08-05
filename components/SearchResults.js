@@ -1,3 +1,5 @@
+import Pagination from "./Pagination";
+
 function SearchResults({ results }) {
   return (
     <div className="mx-auto w-full px-9 sm:pl-[8%] md:pl-[14%] lg:pl-[180px]">
@@ -23,6 +25,8 @@ function SearchResults({ results }) {
           </div>
         );
       })}
+
+      <Pagination />
     </div>
   );
 }
