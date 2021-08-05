@@ -10,7 +10,7 @@ import {
 
 function HeaderOptions() {
   return (
-    <div className="flex justify-evenly lg:justify-start lg:space-x-36 lg:pl-[180px] mt-4 w-full text-sm dark:text-gray-400 border-b dark:border-gray-500">
+    <div className="flex justify-evenly lg:justify-start lg:space-x-36 lg:pl-[180px] -mt-1 sm:mt-4 w-full text-sm dark:text-gray-400 border-b dark:border-gray-500">
       <div className="flex space-x-6">
         <HeaderOption Icon={SearchIcon} title="All" selected />
         <HeaderOption Icon={PhotographIcon} title="Images" />

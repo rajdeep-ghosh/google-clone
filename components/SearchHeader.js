@@ -29,7 +29,7 @@ function SearchHeader({ isDarkMode, changeTheme }) {
           loading="eager"
           alt="logo"
         />
-        <form className="sm:absolute sm:left-40 sm:-top-3 w-full">
+        <form className="sm:absolute sm:left-40 sm:-top-3 w-full flex items-center">
           <Seachbar searchRef={searchRef} searchTerm={router.query.query} />
           <button onClick={search} type="submit" hidden>Search</button>
         </form>
