@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import SearchHeader from "../components/SearchHeader";
 import SearchResults from "../components/SearchResults";
-import dummyResponse from "../dummyResponse";
+import dummyResponse from "../utils/dummyResponse";
 
 function Search({ results }) {
   console.log(results);
