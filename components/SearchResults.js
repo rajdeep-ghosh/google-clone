@@ -13,7 +13,7 @@ function SearchResults({ results }) {
           <div key={result.link} className="max-w-xl mb-8 dark:text-gray-300">
             <div className="group">
               <a className="text-sm" href={result.link}>
-                {result.formattedUrl}
+                <p className="truncate">{result.formattedUrl}</p>
               </a>
               <a href={result.link}>
                 <h1 className="truncate text-lg font-medium text-blue-800 dark:text-blue-400 group-hover:underline">
