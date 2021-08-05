@@ -2,7 +2,8 @@ import { useState } from "react";
 import Head from "next/head";
 import SearchHeader from "../components/SearchHeader";
 
-function Search() {
+function Search({ results }) {
+  console.log(results);
   const [isDarkMode, setDarkMode] = useState(document.querySelector("html").classList.contains("dark"));
 
   function handleTheme() {
@@ -28,3 +29,19 @@ function Search() {
 }
 
 export default Search;
+
+export async function getServerSideProps(context) {
+  const API_KEY = process.env.SEARCH_API_KEY;
+  const CX_KEY = process.env.CONTEXT_KEY;
+  const useDummyData = false;
+
+  const data = await fetch(
+    `https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CX_KEY}&q=${context.query.query}`
+  ).then(response => response.json());
+
+  return {
+    props: {
+      results: data,
+    },
+  };
+}
