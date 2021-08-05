@@ -6,7 +6,6 @@ import SearchResults from "../components/SearchResults";
 import dummyResponse from "../utils/dummyResponse";
 
 function Search({ results }) {
-  console.log(results);
   const router = useRouter();
   const [isDarkMode, setDarkMode] = useState(document.querySelector("html").classList.contains("dark"));
 
