@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import SearchHeader from "../components/SearchHeader";
+import SearchResults from "../components/SearchResults";
 import dummyResponse from "../dummyResponse";
 
 function Search({ results }) {
@@ -27,6 +28,7 @@ function Search({ results }) {
       </Head>
 
       <SearchHeader isDarkMode={isDarkMode} changeTheme={handleTheme} />
+      <SearchResults results={results} />
     </div>
   );
 }
