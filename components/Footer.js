@@ -1,4 +1,6 @@
 function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="footer absolute bottom-0">
       <div className="mb-2">
@@ -18,7 +20,7 @@ function Footer() {
       </div>
       <div className="flex justify-center mt-2">
         <p className="mt-2">
-          &copy; Rajdeep Ghosh 2021 |&nbsp;
+          &copy; Rajdeep Ghosh {year} |&nbsp;
           <a href="https://github.com/rajdeep-ghosh/google-clone/" target="_blank" rel="noreferrer">GitHub</a>
           &nbsp;|&nbsp;
           <a href="https://linkedin.com/in/rajdeepghosh01/" target="_blank" rel="noreferrer">LinkedIn</a>
